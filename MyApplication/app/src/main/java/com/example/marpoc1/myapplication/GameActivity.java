@@ -4,41 +4,36 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
+import android.widget.Button;
 import java.util.Random;
+import com.example.marpoc1.myapplication.GameLogic.Game;
 
 public class GameActivity extends Activity {
 
-    public int rnNumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_Game);
+        setContentView(R.layout.activity_game);
 
-        Random rnd = new Random();
-        rnNumber = rnd.nextInt(100);
-    }
+        Button button= (Button)findViewById(R.id.button);
+        final Game firstGame = new Game();
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                TextView t = findViewById(R.id.editText);
+                int spejimas = Integer.parseInt(t.getText().toString());
+                String tekstas = firstGame.DoGuess(spejimas);
+                TextView ats = findViewById(R.id.textView2);
+                ats.setText(tekstas);
+            }
+        });
 
-    public void Speti(View view)
-    {
-        TextView t = findViewById(R.id.editText);
-        int spejimas = Integer.parseInt(t.getText().toString());
-        String tekstas ="";
-        if (spejimas==rnNumber)
-        {
-            tekstas ="laimejai";
-        } else if (rnNumber>spejimas)
-        {
-            tekstas ="daugiau";
-        }
-        else if (rnNumber<spejimas)
-        {
-            tekstas ="maziau";
-        }
 
-        TextView ats = findViewById(R.id.textView2);
-        ats.setText(tekstas);
+
 
     }
+
+
+
 
 }
