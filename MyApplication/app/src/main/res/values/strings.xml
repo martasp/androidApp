@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyApplication</string>
+    <string name="play">Zaisti</string>
+    <string name="setting">Nustatymai</string>
+    <string name="about">Apie</string>
+
+</resources>
