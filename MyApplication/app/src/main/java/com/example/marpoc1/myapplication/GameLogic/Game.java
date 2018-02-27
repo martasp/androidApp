@@ -8,10 +8,16 @@ import java.util.Random;
 
 public class Game {
 
+ public int from;
+ public int to;
  public int rnNumber;
- public Game() {
+ public Game(int from, int to) {
      Random rnd = new Random();
-     rnNumber = rnd.nextInt(100);
+     this.from  = from;
+     this.to = to;
+     rnNumber = rnd.nextInt(to);
+
+
  }
     public String DoGuess(int spejimas ) {
         String tekstas ="";

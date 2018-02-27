@@ -9,21 +9,27 @@
     tools:context="com.example.marpoc1.myapplication.MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/playBtn"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:text="@string/play" />
+        android:text="@string/play"
+        android:onClick="onClick"
+        />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/GoToSettingsBtn"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:text="@string/setting" />
+        android:text="@string/setting"
+        android:onClick="onClick"
+        />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/aboutBtn"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:text="@string/about" />
+        android:text="@string/about"
+        android:onClick="onClick"
+        />
 
 </LinearLayout>
