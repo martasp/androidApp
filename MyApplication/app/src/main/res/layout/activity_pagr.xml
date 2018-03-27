@@ -1,35 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:layout_gravity="center_vertical|center_horizontal"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
     tools:context="com.example.marpoc1.myapplication.MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/digit"
+        android:text="Guess \nThe Number"
+        android:textColor="@color/colorAccent"
+        android:textSize="35dp" />
     <Button
+        android:layout_marginTop="50dp"
         android:id="@+id/playBtn"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:text="@string/play"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@mipmap/play"
         android:onClick="onClick"
+        android:layout_gravity="center_vertical|center_horizontal"
         />
 
+
+        <!--android:text="@string/play"-->
+
+
     <Button
+        android:layout_marginTop="20dp"
         android:id="@+id/GoToSettingsBtn"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:text="@string/setting"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:onClick="onClick"
+        android:background="@mipmap/options"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_gravity="center_vertical|center_horizontal"
         />
 
     <Button
+        android:layout_marginTop="20dp"
         android:id="@+id/aboutBtn"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:text="@string/about"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimaryDark"
         android:onClick="onClick"
+        android:layout_gravity="center_vertical|center_horizontal"
         />
 
 </LinearLayout>

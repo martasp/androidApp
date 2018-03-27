@@ -23,14 +23,14 @@ public class Game {
         String tekstas ="";
         if (spejimas==rnNumber)
         {
-            tekstas ="laimejai";
+            tekstas ="Winner";
         } else if (rnNumber>spejimas)
         {
-            tekstas ="daugiau";
+            tekstas ="▲";
         }
         else if (rnNumber<spejimas)
         {
-            tekstas ="maziau";
+            tekstas ="▼";
         }
         return tekstas;
     }

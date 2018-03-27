@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:background="@mipmap/one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center_vertical|center_horizontal"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/from"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:text="1" />
-    <EditText
-        android:id="@+id/to"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:text="100" />
+    <!--<EditText-->
+        <!--android:id="@+id/from"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:inputType="number"-->
+        <!--android:textAlignment="center"-->
+        <!--android:text="1" />-->
+    <!--<EditText-->
+        <!--android:id="@+id/to"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:inputType="number"-->
+        <!--android:textAlignment="center"-->
+        <!--android:text="100" />-->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Speti nuo 1 iki 100"
+        android:textAlignment="center"
+        android:fontFamily="@font/digit"
+        android:textSize="50dp"
+        android:textColor="@color/colorAccent"
+        android:text="Guess number from 1 to 100"
         />
 
     <EditText
@@ -33,19 +40,36 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
         android:text="50" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="250dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="speti" />
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:text="Guess" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:textAlignment="center"
+        android:textColor="@color/colorRed"
+        android:textSize="50dp"
+        android:text="▼" />
+
+    <ListView
+        android:layout_marginTop="50dp"
+        android:id="@+id/simpleListView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:divider="#ffffff"
+        android:dividerHeight="1dp"
+        android:listSelector="@color/colorPrimaryDark"/> <!--list selector in green color-->
 
 
 </LinearLayout>

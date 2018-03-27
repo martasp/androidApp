@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Debug;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 
 public class MainActivity extends Activity {
 
@@ -13,6 +14,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_pagr);
     }
 
@@ -28,10 +30,10 @@ public class MainActivity extends Activity {
             Intent intent = new Intent(this, MySettingsActivity.class);
             startActivity(intent);
         }
-        else if (v.getId() == R.id.playBtn)
+        else if (v.getId() == R.id.aboutBtn)
         {
-//            Intent intent = new Intent(this, .class);
-//            startActivity(intent);
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
         }
     }
 

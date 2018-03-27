@@ -11,20 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="from"
+        android:hint="From"
+        android:textAlignment="center"
         android:inputType="number"/>
     <EditText
         android:id="@+id/to"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="to"
+        android:hint="To"
+        android:textAlignment="center"
         android:inputType="number" />
 
     <Button
         android:id="@+id/SaveBtn"
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
         android:text="Save" />
 
 </LinearLayout>

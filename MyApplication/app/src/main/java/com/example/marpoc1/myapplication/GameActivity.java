@@ -1,8 +1,11 @@
 package com.example.marpoc1.myapplication;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Button;
 import java.util.Random;
@@ -13,9 +16,11 @@ public class GameActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_game);
 
 
+        ListView list= (ListView)findViewById(R.id.simpleListView);
 
 
         Button button= (Button)findViewById(R.id.button);
@@ -28,6 +33,16 @@ public class GameActivity extends Activity {
                 String tekstas = firstGame.DoGuess(spejimas);
                 TextView ats = findViewById(R.id.textView2);
                 ats.setText(tekstas);
+                if (tekstas == "▲")
+                {
+                    ats.setTextColor(Color.GREEN);
+                } else{
+                    ats.setTextColor(Color.RED);
+                }
+
+
+
+               // list.getAdapter().
             }
         });
 
